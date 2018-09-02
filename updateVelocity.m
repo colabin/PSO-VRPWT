@@ -17,7 +17,7 @@ end
 
 
 
-self_position=zeros(101,2); %¼ÇÂ¼Ã¿¸öµãµÄÉÏÒ»¸ö¹Ë¿ÍºÍÏÂÒ»¸ö¹Ë¿Í
+self_position=zeros(101,2); %è®°å½•æ¯ä¸ªç‚¹çš„ä¸Šä¸€ä¸ªé¡¾å®¢å’Œä¸‹ä¸€ä¸ªé¡¾å®¢
 for x=1:101
     for y=1:101
         if(particle(iteration,index,x,y)==1)
@@ -31,7 +31,7 @@ for x=1:101
     end
 end
 
-best_order=zeros(10,101,2); %¼ÇÂ¼Ã¿¸öµãµÄÉÏÒ»¸ö¹Ë¿ÍºÍÏÂÒ»¸ö¹Ë¿Í
+best_order=zeros(10,101,2); %è®°å½•æ¯ä¸ªç‚¹çš„ä¸Šä¸€ä¸ªé¡¾å®¢å’Œä¸‹ä¸€ä¸ªé¡¾å®¢
 for size=1:10
     for x=1:101
         for y=1:101
@@ -49,8 +49,8 @@ end
 
 best_position=zeros(101,2);
 for dimension=2:101
-    num=rand();%ÓÃÓÚÁ£×ÓµÄÑ¡È¡
-    num2=rand();%ÓÃì¶¸üĞÂ¸ÅÂÊ 
+    num=rand();%ç”¨äºç²’å­çš„é€‰å–
+    num2=rand();%ç”¨æ–¼æ›´æ–°æ¦‚ç‡ 
     if(num<0.3)
         for x=1:101
             for y=1:2
@@ -58,7 +58,7 @@ for dimension=2:101
             end
         end
     else
-        choose=round(rand()*9+1);  %ÕâÀïµÄ10ÊÇswarm_size
+        choose=round(rand()*9+1);  %è¿™é‡Œçš„10æ˜¯swarm_size
         for x=1:101
             for y=1:2
                 best_position(x,y)=best_order(choose,x,y);
